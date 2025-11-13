@@ -20,6 +20,12 @@ export default class Point implements Geometry{
     return this.coordinate.length == 0;
   }
 
+  translate(dx: number, dy: number): void {
+    this.coordinate[0] += dx;
+    this.coordinate[1] += dy;
+
+  }
+
   x(): number {
     return this.coordinate[0];
   }
