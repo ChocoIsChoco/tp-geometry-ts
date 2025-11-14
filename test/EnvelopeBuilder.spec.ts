@@ -8,7 +8,7 @@ describe("test EnvelopeBuilder", () => {
         const builder = new EnvelopeBuilder();
         {
             const result = builder.build();
-            expect(result.toString()).to.deep.equal('Envelope[(Infinity,Infinity), (-Infinity,-Infinity)]');
+            expect(result.toString()).to.deep.equal('Envelope[(), ()]');
         }
         {
             builder.insert([0.0,1.0]);

@@ -14,11 +14,17 @@ export default class EnvelopeBuilder {
 
 
     insert(coordinate : Coordinate) : void{
+        if ( coordinate.length == 0 ){
+            return ;
+        }
         this.xVals.push(coordinate[0]);
         this.yVals.push(coordinate[1]);        
     }
 
     build(): Envelope {
+        if ( this.xVals.length == 0 ){
+            return new Envelope();
+        }
         const xMin = Math.min(...this.xVals);
         const xMax = Math.max(...this.xVals);
         const yMin = Math.min(...this.yVals);
