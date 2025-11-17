@@ -6,7 +6,9 @@ describe("test Point", () => {
     it("test default constructor", () => {
         const p = new Point();
         expect(p.getCoordinate()).to.deep.equal([]);
+        // @ts-ignore
         expect(Number.isNaN(p.x()));
+        // @ts-ignore
         expect(Number.isNaN(p.y()));
         expect(p.getType()).to.equal("Point")
         expect(p.isEmpty()).to.be.true
